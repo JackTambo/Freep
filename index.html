@@ -1,5 +1,5 @@
 <html>
-    <body bgcolor=sky_blue>  <style>
+     <style>
     * {
       margin: 0;
       padding: 0;
@@ -7,12 +7,13 @@
     }
 
     body {
-      background-color: skyblue;
+      background-color: #7EC8E3; /* Light sky blue */
       font-family: Arial, sans-serif;
     }
 
+    /* Navigation bar styles */
     .navbar {
-      background-color: blue;
+      background-color: #003366; /* Dark blue */
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -22,11 +23,7 @@
       top: 0;
       left: 0;
       z-index: 100;
-      transition: background-color 0.3s ease-in-out;
-    }
-
-    .navbar:hover {
-      background-color: darkblue;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     .navbar a {
@@ -42,25 +39,137 @@
     }
 
     .navbar img {
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
     }
 
-    .content {
-      margin-top: 100px;
-      padding: 20px;
+    .auth-buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .auth-buttons a {
+      background-color: #336699; /* Button blue */
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .auth-buttons a:hover {
+      background-color: #204060;
+    }
+
+    /* Banner styles */
+    .banner {
+      margin-top: 80px; /* To push it below the navbar */
+      background-color: #e6ffe6; /* Light greenish background for the banner */
+      color: #003366;
       text-align: center;
+      padding: 20px;
+      font-size: 24px;
+    }
+
+    /* Content area styles */
+    .content {
+      margin: 20px;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .content h2 {
+      color: #003366;
+    }
+
+    .content p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+      margin: 20px;
+      background-color: #f2f2f2;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar h3 {
+      color: #003366;
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+    }
+
+    .sidebar ul li {
+      margin: 10px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #003366;
+      transition: color 0.3s ease;
+    }
+
+    .sidebar ul li a:hover {
+      color: #336699;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .auth-buttons {
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Navbar -->
   <div class="navbar">
-    <a href="#login">Login</a>
-    <a href="#works">Works</a>
-    <img src="https://via.placeholder.com/40" alt="Logo">
+    <div class="menu-items">
+      <a href="#login">XXXX</a>
+      <a href="#works">XXXX</a>
+    </div>
+    <img src="https://via.placeholder.com/50" alt="Logo">
+    <div class="auth-buttons">
+      <a href="#signin">XXXX</a>
+      <a href="#register">XXXX</a>
+    </div>
   </div>
- 
+
+  <!-- Banner -->
+  <div class="banner">
+    <p>XXXX XXXX XXXX XXXX XXXX XXXX!</p>
+  </div>
+
+  <!-- Main content -->
+  <div class="content">
+    <h2>XXXX XXXX</h2>
+    <p>XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX.</p>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h3>XXXX</h3>
+    <ul>
+      <li><a href="#books">XXXX</a></li>
+      <li><a href="#forums">XXXX</a></li>
+      <li><a href="#poetry">XXXX</a></li>
+      <li><a href="#shorts">XXXX</a></li>
+      <li><a href="#roleplays">XXXX</a></li>
+    </ul>
+  </div>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6582687698592752"
      crossorigin="anonymous"></script>
 </html>
