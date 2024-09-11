@@ -1,5 +1,66 @@
 <html>
-    <body bgcolor=sky_blue>
+    <body bgcolor=sky_blue>  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: skyblue;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: blue;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .navbar:hover {
+      background-color: darkblue;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: lightgray;
+    }
+
+    .navbar img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .content {
+      margin-top: 100px;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="#login">Login</a>
+    <a href="#works">Works</a>
+    <img src="https://via.placeholder.com/40" alt="Logo">
+  </div>
+ 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6582687698592752"
      crossorigin="anonymous"></script>
 </html>
