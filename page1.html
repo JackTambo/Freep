@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day/Night Switch</title>
+
+  <!-- Custom styles for the switch -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 34px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+  </style>
+
+  <script type="module">
+    // Import the Firebase SDKs
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+    import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
+
+    // Your Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAxsMAbkRpSuiIbgoFO2x-ZOysxz0Q9si4",
+      authDomain: "night-4ce58.firebaseapp.com",
+      projectId: "night-4ce58",
+      storageBucket: "night-4ce58.appspot.com",
+      messagingSenderId: "396631404975",
+      appId: "1:396631404975:web:2f472572046615ac2fff5a",
+      measurementId: "G-801J3NGH15"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    // Function to toggle day/night mode in Firebase
+    function toggleDayNight(isNight) {
+      set(ref(db, 'background'), isNight);
+      alert(`You switched to ${isNight ? 'Night Mode' : 'Day Mode'}`);
+    }
+  </script>
+
+</head>
+<body>
+
+  <h1>Day/Night Mode Switch</h1>
+  <label class="switch">
+    <input type="checkbox" id="dayNightSwitch" onclick="toggleDayNight(this.checked)">
+    <span class="slider"></span>
+  </label>
+  <p id="switchState">Switch between Day and Night modes.</p>
+
+  <p>Go to <a href="page2.html">Page 2</a> to see the background change.</p>
+
+</body>
+</html>
