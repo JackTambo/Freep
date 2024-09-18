@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+document.documentElement.requestFullscreen().catch(console.error);
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenOrb</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #01C7FC; /* Blue backdrop */
+            color: #fff; /* White text color for contrast */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-bottom: 2px solid #fff;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            flex-grow: 1;
+        }
+        .header img {
+            max-width: 150px;
+            margin-right: 20px;
+        }
+        .buy-button {
+            padding: 11px 24px;
+            background-color: #fff;
+            color: #01C7FC;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .buy-button:hover {
+            background-color: #f1f1f1;
+        }
+        .photos-section {
+            margin: 20px 0;
+        }
+        .photos-section h2 {
+            font-size: 2em;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+        }
+        .photo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .photo-grid img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .photo-caption {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 5px;
+        }
+        .additional-photos {
+            margin-top: 20px;
+        }
+        .additional-photos h3 {
+            font-size: 1.8em;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with image, heading, and button -->
+        <div class="header">
+            <div style="display: flex; align-items: center;">
+                <img src="logo.png" alt="ZenOrb Logo">
+                <h1>ZenOrb</h1>
+            </div>
+            <a href="buy.html"><button class="buy-button">Buy</button></a>
+        </div>
+
+        <!-- Main photos section -->
+        <div class="photos-section">
+            <div class="photo-grid">
+                <img src="Yell.HEIC" alt="Yellow-themed poster">
+                <img src="Blue.JPG" alt="Blue-themed poster">
+                <img src="Video.gif" alt="Sample Video">
+                <img src="ghg.HEIC" alt="Artistic image">
+                <!-- Add more photos as needed -->
+            </div>
+        </div>
+
+        <!-- Additional photos section -->
+        <div class="additional-photos">
+            <h3>The Creators</h3>
+            <div class="photo-grid">
+                <div>
+                    <img src="Jack.heic" alt="Photo of Jack">
+                    <div class="photo-caption">Jack</div>
+                </div>
+                <div>
+                    <img src="Peasant .heic" alt="Photo of Chloe">
+                    <div class="photo-caption">Chloe</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
