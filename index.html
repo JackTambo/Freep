@@ -1,128 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-        document.documentElement.requestFullscreen().catch(console.error);
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZenOrb</title>
+    <title>The FHDH Gallery</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            color: #fff; /* White text color for contrast */
-            height: 100vh;
-            background: url('Gif.Gif.GIF') no-repeat center center fixed; /* Using local GIF */
-            background-size: cover;
+            background-color: #87CEEB; /* Sky blue background */
+            color: #333; /* Dark gray text for readability */
         }
+
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 0;
-            border-bottom: 2px solid #fff;
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 40px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow for a stylish look */
         }
-        .header h1 {
-            font-size: 2.5em;
-            margin: 0;
-            flex-grow: 1;
+
+        .gallery-section {
+            margin-bottom: 50px;
         }
-        .header img {
-            max-width: 150px;
-            margin-right: 20px;
-        }
-        .buy-button {
-            padding: 11px 24px;
-            background-color: #fff;
-            color: #01C7FC;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .buy-button:hover {
-            background-color: #f1f1f1;
-        }
-        .photos-section {
-            margin: 20px 0;
-        }
-        .photos-section h2 {
+
+        .gallery-section h2 {
             font-size: 2em;
+            margin-bottom: 20px;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
             border-bottom: 2px solid #fff;
             padding-bottom: 10px;
         }
-        .photo-grid {
+
+        .gallery-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            justify-content: center;
+            gap: 20px;
         }
-        .photo-grid img {
+
+        .gallery-grid img {
             width: 100%;
             max-width: 300px;
-            height: auto;
-            border-radius: 8px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow around images */
+            transition: transform 0.3s ease;
         }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05); /* Slight zoom on hover for a dynamic feel */
+        }
+
         .photo-caption {
             text-align: center;
+            margin-top: 10px;
             font-size: 1.2em;
-            margin-top: 5px;
+            color: #fff;
         }
-        .additional-photos {
-            margin-top: 20px;
-        }
-        .additional-photos h3 {
-            font-size: 1.8em;
-            border-bottom: 2px solid #fff;
-            padding-bottom: 10px;
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <!-- Header with image, heading, and button -->
-        <div class="header">
-            <div style="display: flex; align-items: center;">
-                <img src="logo.png" alt="ZenOrb Logo">
-                <h1>ZenOrb</h1>
-                <h3><i>No refunds</i></h3>
-            </div>
-            <a href="buy.html"><button class="buy-button">Buy</button></a>
-        </div>
+        <h1>The Squish Square </h1>
 
-        <!-- Main photos section -->
-        <div class="photos-section">
-            <div class="photo-grid">
-                <img src="Yell.HEIC" alt="Yellow-themed poster">
-                <img src="Blue.JPG" alt="Blue-themed poster">
-                <img src="Video.gif" alt="Sample Video">
-                <img src="ghg.HEIC" alt="Artistic image">
-                <!-- Add more photos as needed -->
-            </div>
-        </div>
-
-        <!-- Additional photos section -->
-        <div class="additional-photos">
-            <h3>The Creators</h3>
-            <div class="photo-grid">
+        <!-- Creators Section -->
+        <div class="gallery-section">
+            <h2>The Creators</h2>
+            <div class="gallery-grid">
                 <div>
-                    <img src="Jack.heic" alt="Photo of Jack">
-                    <div class="photo-caption">Jack</div>
+                    <img src="IMG_0346.HEIC" alt="Creator 1">
+                    <div class="photo-caption">James</div>
                 </div>
                 <div>
-                    <img src="Peasant .heic" alt="Photo of Chloe">
-                    <div class="photo-caption">Chloe</div>
+                    <img src="IMG_0345.HEIC" alt="Creator 2">
+                    <div class="photo-caption">Ayla</div>
                 </div>
             </div>
         </div>
+
+        <!-- Stress Balls Section -->
+        <div class="gallery-section">
+            <h2>Stress Balls</h2>
+            <div class="gallery-grid">
+                <div>
+                    <img src="IMG_0341.HEIC" alt="Stress Ball 1">
+                    <div class="photo-caption"></div>
+                </div>
+                <div>
+                    <img src="IMG_0342.HEIC" alt="Stress Ball 2">
+                    <div class="photo-caption"></div>
+                </div>
+                <div>
+                    <img src="IMG_0343.HEIC" alt="Stress Ball 3">
+                    <div class="photo-caption"></div>
+                </div>
+                <div>
+                    <img src="IMG_0344.HEIC" alt="Stress Ball 4">
+                    <div class="photo-caption"></div>
+                </div>
+            </div>
+        </div>
+
     </div>
+
 </body>
 </html>
